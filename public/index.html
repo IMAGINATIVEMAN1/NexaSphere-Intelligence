@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NexaSphere Intelligence — AI Business Intelligence Assistant</title>
+<meta name="description" content="Ask NexaSphere's data anything. Every figure computed from 16,733 transactions; the model explains but cannot alter a number.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="head-in">
+    <div class="mark">N</div>
+    <div class="brand">
+      <h1>NexaSphere Intelligence</h1>
+      <p>AI Business Intelligence & Growth Advisor</p>
+    </div>
+    <span class="pill live" id="status">loading…</span>
+  </div>
+</header>
+
+<!-- Two panes: the assistant is the product, the briefing is the context beside it. -->
+<div class="shell">
+
+  <!-- ============================ LEFT: the assistant ============================ -->
+  <main class="convo" id="convo">
+
+    <div class="opening" id="opening">
+      <div class="eyebrow">NexaSphere Retail · 16,733 order lines · 24 months</div>
+      <h2>Ask Nexa anything about the business.</h2>
+      <p class="lede" id="lede">Reading the ledger…</p>
+
+      <div class="starters" id="starters">
+        <button class="starter" data-q="What should we do to make more profit?">
+          <span class="s-q">What should we do to make more profit?</span>
+          <span class="s-h">the prioritised answer</span>
+        </button>
+        <button class="starter" data-q="Is revenue growth leading to stronger profitability?">
+          <span class="s-q">Is growth leading to stronger profitability?</span>
+          <span class="s-h">the headline question</span>
+        </button>
+        <button class="starter" data-q="Which marketing campaigns generate the best return on investment?">
+          <span class="s-q">Which campaigns give the best return?</span>
+          <span class="s-h">₦997m of spend, examined</span>
+        </button>
+        <button class="starter" data-q="Which delivery partners are associated with delays or poor customer ratings?">
+          <span class="s-q">Which delivery partners are failing us?</span>
+          <span class="s-h">six couriers compared</span>
+        </button>
+        <button class="starter" data-q="Which stores are experiencing stockouts or excess inventory?">
+          <span class="s-q">Where are the stockouts and excess stock?</span>
+          <span class="s-h">24 stores, 24 months</span>
+        </button>
+        <button class="starter" data-q="Where is the business failing to meet its targets?">
+          <span class="s-q">Where are we missing targets?</span>
+          <span class="s-h">plan versus actual</span>
+        </button>
+        <button class="starter" data-q="Which employees perform well based on both revenue and profitability?">
+          <span class="s-q">Who are our strongest employees?</span>
+          <span class="s-h">revenue + contribution profit</span>
+        </button>
+        <button class="starter" data-q="Show me each employee and what they do">
+          <span class="s-q">What does each employee do?</span>
+          <span class="s-h">role + measurable performance</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="thread" id="thread"></div>
+
+  </main>
+
+  <!-- ============================ RIGHT: the briefing ============================ -->
+  <aside class="brief" id="brief">
+
+    <section class="panel">
+      <h3>Headline</h3>
+      <div class="kpis" id="kpis"></div>
+    </section>
+
+    <section class="panel coverage-panel">
+      <h3>Data coverage</h3>
+      <p class="panel-sub">What the supplied dataset can answer reliably — and where it stops.</p>
+      <div id="coverage"></div>
+    </section>
+
+    <section class="panel">
+      <h3>The audit</h3>
+      <p class="panel-sub" id="audit-sub">Findings are discovered by threshold tests over the transaction rows, not written in advance.</p>
+      <div class="stack" id="findings"></div>
+    </section>
+
+    <section class="panel">
+      <h3>Evidence</h3>
+      <p class="panel-sub">Computed in integer kobo. No model touches a number.</p>
+      <div id="charts"></div>
+    </section>
+
+    <p class="foot-note" id="foot"></p>
+  </aside>
+
+</div>
+
+<!-- The ask bar is fixed, because asking is the primary action. -->
+<div class="ask">
+  <div class="ask-in">
+    <button id="voice" class="voice" aria-label="Talk to Nexa" title="Talk to Nexa">🎙</button>
+    <input id="q" type="text" placeholder="Ask Nexa about profit, growth, employees, customers, stock, campaigns…" autocomplete="off">
+    <button id="go" aria-label="Ask">Ask</button>
+    <span id="voice-status" class="voice-status" aria-live="polite"></span>
+  </div>
+</div>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>

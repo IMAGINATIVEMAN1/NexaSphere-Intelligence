@@ -1,0 +1,15 @@
+{
+  "name": "nexa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NexaSphere Intelligence \u2014 AI Business Intelligence Assistant",
+  "scripts": {
+    "test": "node scripts/selftest.js",
+    "build": "node scripts/build-data.js",
+    "test:robustness": "node scripts/robustness-test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
